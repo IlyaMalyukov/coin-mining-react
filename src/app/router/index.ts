@@ -1,3 +1,3 @@
-import AppRouter from './model.tsx';
+import AppRouter from './app-router.tsx';
 
 export { AppRouter };
