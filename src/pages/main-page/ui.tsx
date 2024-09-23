@@ -1,7 +1,10 @@
+import { Balance } from '@/entities';
+
 const HomePage = () => {
   return (
-    <div>
-      <h1>Home Page</h1>
+    <div className="page">
+      <h1 className="page__title">COIN MINING</h1>
+      <Balance />
     </div>
   );
 };
