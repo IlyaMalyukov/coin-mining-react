@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { MainPage, LeaderboardPage } from '@/pages';
+import { MainPage, LeaderboardPage, SkinsPage } from '@/pages';
 import { ROUTES } from '@/shared';
 
 const AppRouter = () => (
@@ -7,6 +7,7 @@ const AppRouter = () => (
     <Routes>
       <Route path={ROUTES.MAIN_PAGE} element={<MainPage />} />
       <Route path={ROUTES.LEADERBOARD_PAGE} element={<LeaderboardPage />} />
+      <Route path={ROUTES.SKINS_PAGE} element={<SkinsPage />} />
     </Routes>
   </Router>
 );
