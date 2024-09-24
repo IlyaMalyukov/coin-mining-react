@@ -22,7 +22,7 @@ const TopPlayersPage: React.FC = () => {
 
   useEffect(() => {
     fetchPlayers();
-  }, []);
+  });
 
   return (
     <div className="page">
