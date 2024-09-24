@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { observer } from 'mobx-react';
 import { coinsStore } from '@/app/store';
 import { ROUTES } from '@/shared';
 import { Tool } from './types.ts';
 import './style.css';
 
-const Toolbar = () => {
+const Toolbar = observer(() => {
   const navigate = useNavigate();
 
   const toLeaderboard = () => {
@@ -68,6 +69,6 @@ const Toolbar = () => {
       ))}
     </div>
   );
-};
+});
 
 export default Toolbar;
