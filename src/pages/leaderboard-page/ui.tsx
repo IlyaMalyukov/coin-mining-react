@@ -10,7 +10,9 @@ const TopPlayersPage: React.FC = () => {
   const [players, setPlayers] = useState<Users | undefined>(undefined);
 
   const fetchPlayers = async () => {
-    console.log('fetch')
+    // при использовании StrictMode может вызываться повторный рендеринг компонента
+    // поэтому запрос отправляется каждый раз при рендеринге
+    // в продакшене StrictMode не используется
     try {
       const agent = getPlayersAgent();
       const bestPlayers = await agent.getBestPlayers();
@@ -34,7 +36,7 @@ const TopPlayersPage: React.FC = () => {
 
   useEffect(() => {
     fetchPlayers();
-  });
+  }, []);
 
   return (
     <div className="page">
