@@ -1,6 +1,7 @@
 import { Balance } from '@/entities';
 import { EarnCoin } from '@/features';
 import { coinsStore } from '@/app/store';
+import { Toolbar } from '@/widgets';
 
 const HomePage = () => {
   const handleEarnCoin = (coinsAmount: number) => {
@@ -12,6 +13,7 @@ const HomePage = () => {
       <h1 className="page__title">COIN MINING</h1>
       <Balance />
       <EarnCoin onEarn={ handleEarnCoin } />
+      <Toolbar />
     </div>
   );
 };
