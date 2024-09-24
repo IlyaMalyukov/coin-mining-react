@@ -1,5 +1,6 @@
 import React from 'react';
 import { BackButton } from '@/shared';
+import './style.css';
 
 type HeadTitleProps = {
   title: string;

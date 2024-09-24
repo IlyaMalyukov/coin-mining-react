@@ -31,3 +31,5 @@ class CoinsStore {
 }
 
 export const coinsStore = new CoinsStore();
+
+export type { Skin };
