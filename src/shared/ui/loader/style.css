@@ -1,0 +1,10 @@
+.icon {
+    width: 50px;
+    margin: 30px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
