@@ -3,7 +3,7 @@ import { EarnCoin } from '@/features';
 import { coinsStore } from '@/app/store';
 
 const HomePage = () => {
-  const earnCoins = (coinsAmount: number) => {
+  const handleEarnCoin = (coinsAmount: number) => {
     coinsStore.updateTotalBalance(coinsAmount)
   };
 
@@ -11,7 +11,7 @@ const HomePage = () => {
     <div className="page">
       <h1 className="page__title">COIN MINING</h1>
       <Balance />
-      <EarnCoin onEarn={ earnCoins } />
+      <EarnCoin onEarn={ handleEarnCoin } />
     </div>
   );
 };

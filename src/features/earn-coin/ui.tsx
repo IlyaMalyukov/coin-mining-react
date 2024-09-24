@@ -13,7 +13,7 @@ const EarnCoin: React.FC<EarnCoinProps> = ({ onEarn }) => {
 
   return (
     <div className="wrapper">
-      <div className="coin-wrapper" onClick={handleClick}>
+      <div className="coin-wrapper" onClick={ handleClick }>
         <img
           className="coin"
           src={`/src/assets/images/${coinsStore.activeSkin}.png`}
