@@ -57,11 +57,11 @@ const Toolbar = () => {
         <div
           key={tool.name}
           className="toolbar__button"
-          onClick={tool.method}
+          onClick={ tool.method }
         >
           <img
             className="toolbar__icon"
-            src={`/src/assets/icons/${ tool.name }.svg`}
+            src={`/src/assets/icons/${tool.name}.svg`}
             alt={tool.name}
           />
         </div>

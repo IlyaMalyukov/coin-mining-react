@@ -6,14 +6,14 @@ type EarnCoinProps = {
   onEarn: (profit: number) => void;
 }
 
-const EarnCoin: React.FC<EarnCoinProps> = ({ onEarn }) => {
+const EarnCoin: React.FC<EarnCoinProps> = ({onEarn}) => {
   const handleClick = () => {
     onEarn(coinsStore.profitPerTap);
   };
 
   return (
     <div className="wrapper">
-      <div className="coin-wrapper" onClick={ handleClick }>
+      <div className="coin-wrapper" onClick={handleClick}>
         <img
           className="coin"
           src={`/src/assets/images/${coinsStore.activeSkin}.png`}
