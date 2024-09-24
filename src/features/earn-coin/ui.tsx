@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react';
 import { coinsStore } from '@/app/store';
 import './style.css';
 
@@ -6,7 +7,7 @@ type EarnCoinProps = {
   onEarn: (profit: number) => void;
 }
 
-const EarnCoin: React.FC<EarnCoinProps> = ({onEarn}) => {
+const EarnCoin: React.FC<EarnCoinProps> = observer(({onEarn}) => {
   const handleClick = () => {
     onEarn(coinsStore.profitPerTap);
   };
@@ -27,6 +28,6 @@ const EarnCoin: React.FC<EarnCoinProps> = ({onEarn}) => {
       />
     </div>
   );
-};
+});
 
 export default EarnCoin;
